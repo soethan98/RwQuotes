@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.raywenderlich.android.rwquotes"
+<manifest package="com.soethan.android.rwquotes"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
   <application
-      android:name=".RWQuoteApplication"
+      android:name="com.soethan.android.rwquotes.RWQuoteApplication"
       android:allowBackup="false"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
@@ -13,11 +13,11 @@
       android:theme="@style/AppTheme"
       tools:ignore="GoogleAppIndexingWarning">
     <activity
-        android:name=".ui.AddEditActivity"
-        android:parentActivityName=".ui.MainActivity" />
+        android:name="com.soethan.android.rwquotes.ui.AddEditActivity"
+        android:parentActivityName="com.soethan.android.rwquotes.ui.MainActivity" />
     <!-- Main Activity -->
     <activity
-        android:name=".ui.MainActivity"
+        android:name="com.soethan.android.rwquotes.ui.MainActivity"
         android:theme="@style/SplashTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
