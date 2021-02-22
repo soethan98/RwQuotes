@@ -25,7 +25,7 @@ jobs:
         run: ./gradlew assembleRelease
       #3
       - name: Sign APK
-        uses: r0adkll/sign-android-release@v1.0.1
+        uses: r0adkll/sign-android-release@v1.0.4
         # ID used to access action output
         id: sign_up
         with:
@@ -38,7 +38,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: release.apk
-          path: app/build/outputs/apk/release/release.apk
+          path: ${{steps.sign_up.outputs.signedReleaseFile}}
       #5
       - uses: actions/upload-artifact@v2
         with:
